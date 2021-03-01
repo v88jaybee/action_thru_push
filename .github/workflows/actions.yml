@@ -6,6 +6,11 @@ on:
       - bugfix/git_status
       - master
       - new_test
+      
+  pull_request:
+    branches: 
+      - master
+      - develop
 
 jobs:
   build:
