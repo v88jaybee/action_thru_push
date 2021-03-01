@@ -1,0 +1,27 @@
+name: Github Actions Debug
+
+on:
+  push:
+    branches: 
+      - bugfix/git_status
+      - master
+      - new_test
+      
+  pull_request:
+    branches: 
+      - master
+      - develop
+
+jobs:
+  build:
+    name: Git Commands Unit Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v2
+    - name: Use Node.js 
+      uses: actions/setup-node@v1
+    - name: Install dependencies
+      run: npm install
+    - name: Test project
+      run: npm test
