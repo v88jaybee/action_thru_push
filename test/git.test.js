@@ -7,7 +7,7 @@ const expect = chai.expect;
 
 describe("Testing GitCommand.status()", function(){
 
-    it('Should return information if has changes in directoryreasd', function(){
+    it('Should return information if has changes in directoryreasds', function(){
         let wd = new WorkingDirectory();
         wd.addFile("index.html", "views", "<html>Hello</html>");
         wd.addFile("index.js", "assets/scripts", "alert('Hi!')");
